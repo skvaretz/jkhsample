@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/gkh</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <mapping class="ru.itpark.entity.BillEntity"/>
+    <mapping class="ru.itpark.entity.FlatEntity"/>
+    <mapping class="ru.itpark.entity.IndicatorEntity"/>
+    <mapping class="ru.itpark.entity.InvoicePositionEntity"/>
+    <mapping class="ru.itpark.entity.MeterEntity"/>
+    <mapping class="ru.itpark.entity.MetersTypeEntity"/>
+    <mapping class="ru.itpark.entity.ServicesEntity"/>
+    <mapping class="ru.itpark.entity.TariffEntity"/>
+    <mapping class="ru.itpark.entity.TenantEntity"/>
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+    <property name="dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+  </session-factory>
+</hibernate-configuration>
